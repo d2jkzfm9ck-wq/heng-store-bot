@@ -70,7 +70,7 @@ async def games(update: Update, context: ContextTypes.DEFAULT_TYPE):
     except Exception as e:
         await update.message.reply_text(f"Error: {e}")
 
-app = Application.builder().token(BOT_TOKEN).build()
+app = ApplicationBuilder().token(BOT_TOKEN).build()
 
 app.add_handler(CommandHandler("start", start))
 app.add_handler(CommandHandler("balance", balance))
@@ -81,7 +81,7 @@ import asyncio  # Keep this if needed elsewhere
 # ... your handlers (balance, games, etc.) ...
 
 if __name__ == "__main__":
-    app = ApplicationBuilder().token("YOUR_BOT_TOKEN").build()
+    )
     
     app.add_handler(CommandHandler("balance", balance))
     app.add_handler(CommandHandler("games", games))
