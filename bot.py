@@ -76,13 +76,17 @@ app.add_handler(CommandHandler("start", start))
 app.add_handler(CommandHandler("balance", balance))
 app.add_handler(CommandHandler("games", games))
 
-import asyncio  # Keep this if needed elsewhere
+import asyncio
 
-# ... your handlers (balance, games, etc.) ...
+# ... your other bot setup code ...
 
-if __name__ == "__main__":
+if __name__ == '__main__':
+    # Add these two lines to explicitly set the loop
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
     
-    print("✅ Heng Store Bot is running...")
+    # Now run the bot
     app.run_polling()
+
 
 
