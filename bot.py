@@ -79,9 +79,9 @@ app.add_handler(CommandHandler("start", start))
 app.add_handler(CommandHandler("balance", balance))
 app.add_handler(CommandHandler("games", games))
 
-import asyncio  # Keep this if you use asyncio elsewhere in your bot
+import asyncio  # Keep this if needed elsewhere
 
-# ... your handlers and setup ...
+# ... your handlers (balance, games, etc.) ...
 
 if __name__ == "__main__":
     app = ApplicationBuilder().token("YOUR_BOT_TOKEN").build()
@@ -91,4 +91,5 @@ if __name__ == "__main__":
     
     print("✅ Heng Store Bot is running...")
     app.run_polling()
+
 
