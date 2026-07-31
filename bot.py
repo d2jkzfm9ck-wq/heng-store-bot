@@ -81,10 +81,6 @@ import asyncio  # Keep this if needed elsewhere
 # ... your handlers (balance, games, etc.) ...
 
 if __name__ == "__main__":
-    )
-    
-    app.add_handler(CommandHandler("balance", balance))
-    app.add_handler(CommandHandler("games", games))
     
     print("✅ Heng Store Bot is running...")
     app.run_polling()
